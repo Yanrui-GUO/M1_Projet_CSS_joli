@@ -1,0 +1,125 @@
+<html>
+
+	<head>
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<script src="script.js"></script>
+		
+		<link href="css/style.css" type="text/css" rel="stylesheet" > 
+		
+		<title>Download le poster</title>
+		
+	</head>
+
+	<body>
+
+		<!-- button to top -->
+		<div class="button">
+			<a href=#top><img src="images/button.png" width="60" height="60"></a>
+		</div>
+		<!-- //button to top -->
+		
+		<!-- le select et le button pour changer le style css-->
+		<div id="changestylee">
+		
+			<select id="changestyle" size=1>
+				<option value="css/style.css">Natural</option>
+				<option value="css/style2.css">Dynamic</option>
+			</select>
+			
+			<button name="btn_change_style" onclick="switch_style(document.getElementById('changestyle').value)">Changer le style</button>        
+	
+		</div>
+		<!-- //le select et le button pour changer le style css-->		
+	
+		<!-- banner -->
+		<div class="banner">
+
+			<!-- navigation -->
+			<div class="top-nav">
+				<div class="container">
+				
+					<div class="logo" id="top">
+						<h1><a href="index.html">Crowdsourcing
+						<span>Human-Intelligence</span></a></h1> 
+					</div>
+
+					<div class="navbar-right">
+						<ul class="nav navbar">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="advantage.html">Advantages </a></li>
+							<li><a href="amt.html">AMT</a></li>  
+							<li><a href="download.html" class="active">Download</a></li>
+						</ul>
+					</div> 
+
+				</div>	
+			</div>	
+			<!-- //navigation -->
+			
+			<!-- banner-text -->
+			<div class="bannert"> 
+				
+				<div id="question">
+					<p>Click here for downloading.</p> 
+				</div>
+				<!-- Télécharger le poster du projet no silo en cliquant l'image -->
+				<div id="telecharger" height="50" width="50">
+					<a href="images/no_silo_poster.png"  download="Poster_Crowdsouring_YanruiGUO"><img src="images/downloadbutton1.png" title="click_download" align="center" width="50" height="50"></a>
+                </div>
+				<!-- //Télécharger le poster du projet no silo en cliquant l'image -->
+			</div> 
+			<!-- //banner-text -->
+		</div>
+		<!-- //banner -->
+       
+	   
+		<!-- Ligne pointillée orange -->
+		<div class="box-1">
+			<p>&nbsp;</p>
+		</div>
+		<!-- //Ligne pointillée orange -->
+        
+
+		<!-- Le pied de la page -->
+		<div class="pied" id="Download">	
+			<div class="navpied">
+				<h3>Navigation</h3>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="advantage.html"  class="active">Advantages </a></li>
+						<li><a href="amt.html">AMT</a></li>  
+					</ul>
+			</div>
+			
+			<div class="contact">
+				<h3>Download</h3>
+					<form action="download.html" method="post">
+						<input type="email" name="email" placeholder="Your Email">
+						<input type="submit" value="Subcribe" onclick="return confirm('Your e-mail will be registered for poster.');">
+					</form>
+        
+				<div class="creation">
+					<p>Enter your Email and download our poster ! </p>
+					<p> Create by Yanrui GUO | Yiyang Wang </p>
+					
+					<table>
+						<tr>
+							<td><p>Contact us:</p></td>
+							<td><p><a href="mailto:yanruiguoo@gmail.com">  Yanruiguoo@gmail.com</a></p></td>
+						</tr>
+						<tr>
+							<td></td>            
+							<td><p><a href="mailto:yiyangwang@gmail.com">yiyangwang07@gmail.com</a></p></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- //Le pied de la page -->
+
+	</body>
+		
+</html>

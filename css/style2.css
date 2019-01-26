@@ -1,0 +1,596 @@
+
+body{
+	margin:auto;
+	font-family: 'Roboto', sans-serif;
+	background: #ffffff;  
+    min-width: 1000px;
+	max-width:1650px;
+	
+}
+
+body a{
+	transition: 0.5s all;
+	text-decoration:none;
+	outline:none;
+}
+
+p{
+	margin:0;
+}
+
+body a:hover,body a:focus{
+	text-decoration:none;
+	outline: none;
+} 
+
+/*-- banner --*/
+/*--on met le background image url dans css --*/
+.banner {
+	background:url(../images/1-2.jpg) center 0px;
+	position: relative; 
+	background-repeat:no-repeat;
+
+}  
+
+/*-- select et button pour changer le style --*/
+	/*-- on met le select et le button dans le position qui est relative sur le fenêtre. --*/ 
+	/*-- z-index, c'est pour des positions de différent ordre en static --*/
+#changestylee select{
+    position: absolute;
+    right: 420px;
+    z-index: 1;
+    top:20px;
+	width:90px;
+}
+
+#changestylee button{
+    position:absolute;
+    right:250px;
+    width:150px;
+    z-index: 1;
+    top:20px;
+    
+}
+
+select {
+    width: 75px;
+    padding: 0.6em;
+    font-size: 0.8em;
+    float: left;
+    color: #ffffff;
+    outline: none;
+    border: 1px solid #ffffff;
+    background: none;
+    -webkit-appearance: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+} 
+
+select:hover {
+	border-color:#17b9ea;
+	background:grey;
+} 
+
+button {
+    float: left;
+    color: #ffffff;
+    font-size: 0.8em;
+    outline: none;
+    padding: 0.6em 1.5em;
+    border: 1px solid #ffffff;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -webkit-appearance: none;
+    background: none;
+    margin-left: 1em;
+} 
+button:hover{
+    background-color: #17b9ea;
+    border-color: #17b9ea;
+} 
+/*-- //select et button pour changer le style --*/
+
+/*-- logo --*/ 
+/*-- le logo aussi pointe vers à la page d'accueil --*/
+.logo {
+    margin-left:50px;
+}
+.logo h1 {
+    font-size: 3em;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+.logo h1 a {
+    display: inline-block;
+    color: #ffffff; 
+}
+.logo h1 a span {
+    font-size: .25em;
+    letter-spacing: 11px;
+    display: block;
+    margin-left: 20px;
+    font-weight: 300;
+}
+/*-- //logo --*/
+
+/*-- top-nav --*/
+.navbar-left {
+    margin-left: 12em;
+}
+.top-nav {
+    z-index: 999;
+    padding: 1.5em 0 1em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+nav.navbar.navbar-default {
+    background-color: inherit;
+    border: none;
+    margin: 0;
+}
+ul.nav.navbar {
+    text-align: center;
+    margin: 1.4em 0 0;
+    min-height: inherit;
+}
+.top-nav ul li {
+    margin: 0 0 0 4em;
+    display: inline-block;
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.4em;
+    color: #ffffff;
+    position: relative;
+    font-weight: 300;
+    padding: 0;
+}
+/*-- ex: .nav > li 
+					le ">" est pour selectioner tous les éléments de 'li' en tant qu'enfants du élément de .nav --*/ 
+.nav > li > a:hover, .nav > li > a:focus {
+    background: none;
+} 
+.top-nav ul li a:hover, .top-nav ul li a.active {
+    color: #17b9ea ;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+	-webkit-transform: scale(1.2);
+	transform: scale(1.1);
+}
+
+.top-nav .nav > a, .nav  > a:hover, .nav > a:focus {
+    color: #17b9ea;
+    border: none;
+    background: none;
+}
+
+.navbar-right { 
+    margin-right: 0;
+}
+/*-- //top-nav --*/
+
+/*-- banner-text --*/  
+.bannert {
+    text-align: center;
+    padding: 10em 0;
+}
+#question{
+	font-size:100px;
+	color:aliceblue;
+}
+#intro{
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+	font-size:15px;
+    color: aliceblue;
+}
+#intro{
+
+	background-repeat:no-repeat;
+}
+#intro a:hover{
+	opacity:0.6;
+}
+
+/*-- //banner-text --*/
+/*-- //banner --*/
+
+
+
+/*-- Les trois parts d'échelle après le banner--*/
+	/*-- chaque part pointe vers un position différent qui est identifié par id sur la page en cours--*/
+	/*-- dans cette partie, on utilise transition pour les jolies changements des image et des textes (source:w3school)--*/
+.scale{
+    padding:0em;
+    display: inline;
+    margin-top: 15px;
+}
+
+.ruby {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    height: 200px;
+    display: inline;
+    float: left;
+    width: 33.33333333333333333333333%;
+}
+
+.ruby img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+} 
+
+.ruby .caption {
+    padding: 2em;
+    -webkit-backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+} 
+
+.ruby:hover img {
+	opacity: 0.5;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+} 
+
+.ruby h3 {
+    color: #ffffff;
+    font-size: 2.2em;
+    font-weight: 200;
+    letter-spacing: 2px;
+    background: rgba(0, 0, 0, 0.69);
+    display: inline-grid;
+    padding: 6px 12px;
+    margin-top: 5%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,25px,0);
+}
+
+.ruby p {
+    color: #ffffff;
+    margin-top: 0.5em;
+    border: 1px solid #ffffff;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0) scale(1.1);
+    transform: translate3d(0,20px,0) scale(1.1);
+    text-align: center;
+	font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.ruby:hover h3 {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+} 
+
+.ruby:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0) scale(1);
+	transform: translate3d(0,0,0) scale(1);
+}
+
+/*--Le rembourrage et les bordures de l'élément n'augmentent plus sa largeur(source:w3school)--*/
+*{box-sizing:border-box;}
+/*--// Les trois parts d'échelle après le banner--*/ 
+
+
+
+/*-- N°1 contenu de la page d'accueil--*/ 
+.tem-row {
+    display:inline;
+    margin-bottom: 100px;
+}
+.tem-right {
+    float:left;
+    width:40%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.tem-left {
+    float:right;
+    width:40%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+h3.titre,h2.titre{
+    text-align:center;
+    font-size: 4em;
+    color: white;
+    margin-bottom: 0.6em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+.tem h2.titre{
+    margin-bottom:0.1em;
+}
+.tem p.description{
+    width: 72%;
+    margin:0 auto 5em;
+    text-align: center;
+}
+.tem h4{
+    font-size: 2em;
+    margin-bottom:0.2em;
+    color:#333333;
+    font-weight: 300;
+}
+.tem-right img{
+    width:300px;
+}
+.learn-more a{
+	font-style:italic;
+	color:#ffffff;
+}
+.learn-more a:hover{
+	font-style:italic;
+	color:#FF5722;
+	text-decoration:underline;
+}
+/*-- //N°1 contenu de la page d'accueil--*/  
+
+
+/*-- Le contenu principau de la page 'advatages.html' --*/
+.tem-a h2.titre{
+    margin-bottom:0.1em;
+}
+.tem-a p.description{
+    width: 72%;
+    margin:0 auto 5em;
+    text-align: center;
+}
+.tem-a h4{
+    font-size: 2em;
+    margin-bottom: .2em;
+    color:#333333;
+    font-weight: 300;
+}
+
+.tem-a{
+	height:auto;
+}
+.tem-row-a {
+	text-align:justify;
+    display:inline;
+    margin-bottom: 100px;
+}
+.tem-right-a {
+	text-align:center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+.tem-left-a {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+.tem-titre-a{
+    background: url(../images/img1.jpg)no-repeat center 0px;
+    background-size: cover;
+    background:#17b9ea;
+	margin-top:5em;
+    height: 270px;
+    padding-top: 25px;
+}
+/*-- //Le contenu principau de la page 'advatages.html' --*/
+
+
+
+/*-- N°2 contenu de la page d'accueil--*/ 
+.tem-titre-1{
+    background: url(../images/img1.jpg)no-repeat center 0px;
+    background-size: cover;
+    background:#17b9ea;
+	margin-top:17em;
+    height: 270px;
+    padding-top: 25px;
+}
+
+.tem-titre-2{
+    background: url(../images/img1.jpg)no-repeat center 0px;
+    background-size: cover;
+    background:#17b9ea;
+	margin-top:40em;
+    height: 270px;
+    padding-top: 25px;
+}
+.box{
+    margin-top: 750px;
+    height: 200px;
+    border-top:10px dotted #17b9ea;
+    
+}
+.box-1{
+    margin-top: 30px;
+    border-top:10px dotted #17b9ea;
+    
+}
+.box-2{
+    margin-top: 750px;
+    border-top:10px dotted #17b9ea;
+    margin-bottom:150px;
+    
+}
+/*-- //N°2 contenu de la page d'accueil--*/  
+
+
+/*-- N°3 contenu de la page d'accueil--*/  
+.tem-titre-3{
+    float: left;
+    width:37%;
+    margin-left: 3%;
+    background: url(../images/img1.jpg)no-repeat center 0px;
+    background-size: cover;
+    background:#17b9ea;
+    height: 300px;
+    padding-top: 25px;
+    margin-top:3%;
+}
+
+.tem-row-3{
+    float:right;
+    width: 47%;
+    margin-right: 3%;
+    margin-bottom: 100px;
+}
+
+.tem-3{
+    display:inline;
+}
+
+.tem-right-3{
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.tem-left-3{
+    margin-right: 10%;
+    margin-top: 0;
+}
+
+.tem-right-3 img{
+    width:300px;
+}
+/*-- //N°3 contenu de la page d'accueil--*/  
+
+
+/*-- le pied de la page --*/
+.pied{
+    padding: 4em 0 3em;
+    background: #191d22;
+}
+
+.pied h3{
+    font-size:2.8em;
+    color:#17b9ea;
+    margin-bottom: 0.6em;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+.pied li{
+    display: block;
+    margin: 1em 0 0;
+	font-size:1em;
+}
+.pied li a {
+    color:#fff;    
+}
+.pied li a:hover{
+    color: #FF5722;    
+}
+.pied form {
+    position: relative;
+} 
+.pied input[type="email"] {
+    width: 63%;
+    padding: 0.8em;
+    font-size: 0.9em;
+    float: left;
+    color: #ffffff;
+    outline: none;
+    border: 1px solid #ffffff;
+    background: none;
+    -webkit-appearance: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+} 
+.pied form:hover input[type="email"] {
+	border-color:#FF5722;
+} 
+.pied input[type="submit"] {
+    float: left;
+    color: #ffffff;
+    font-size: .9em;
+    outline: none;
+    padding: 0.8em 1.5em;
+    border: 1px solid #FFFFFF;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -webkit-appearance: none;
+    background: none;
+    margin-left: 1em;
+} 
+.pied form:hover input[type="submit"]{
+    background-color: #FF5722;
+    border-color: #FF5722;
+} 
+.pied li a:hover{
+   color: #FF5722;
+} 
+.creation p {
+    color: #fff;
+    margin-top: 1.2em;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: .9em;
+}
+.creation p a{ 
+    color: #FF5722;
+	text-decoration:none;
+	-webkit-transition:.5s all;
+	transition:.5s all;
+}
+.creation p a:hover{ 
+    color: #ffffff; 
+}
+.pied{
+    height: 450px;
+    margin-bottom: 0;
+    padding-top: 20px;
+}
+.navpied{
+    float: left;
+    width: 40%;
+    margin-left: 10%;
+}
+.contact{
+    float: right;
+    width: 40%;
+    margin-right: 10%;
+}
+.creation{
+    margin-top: 100px;
+}
+/*-- //le pied de la page --*/
+
+
+
+/*-- le button pour retour en haut de la page--*/
+	/*-- on met ce button dans un position fixed--*/
+.button{
+	width:60px;
+	height:60px;
+	position:fixed;
+	right:50px;
+	bottom:100px;
+	z-index:100;
+	opacity:1;
+}
+
+.button a:hover{
+	opacity:0.6;
+}
+/*-- //le button pour retour en haut de la page--*/
+
+
